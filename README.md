@@ -32,11 +32,11 @@ Thank you for considering contributing to **LeetCode-Solutions**! This repositor
      ```
 5. **Commit your changes**: Use the following format for commit messages:
    ```sh
-   git commit -m "Solution #num - Creator/Edited - Date"
+   git commit -m "Solution #num - Creator/Edited - Date - commit #num"
    ```
    or for explanations:
    ```sh
-   git commit -m "Explanation #num - Creator/Edited - Date"
+   git commit -m "Explanation #num - Creator/Edited - Date - commit #num"
    ```
 6. **Push your branch**:
    ```sh
