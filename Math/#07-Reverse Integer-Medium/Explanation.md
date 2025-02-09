@@ -1,0 +1,3 @@
+Explanation: (Reverse Integer)
+
+->First let us review the objective of the question. The main objective is to return a reversed integer or return 0 if the reversed number is greater than 2^31-1 or lesser than -2^31. So for a basic solution, we first need to store the maximum and minimum values. Then we need to store the sign of the number so that we can work with a positive number. But we need to note that if the number is -2^31, it will exceed our maximum value by 1. So here we can check and return 0 or we can create a new variable(in case of languages like C). Now we reverse the number and check if it is above or below our limit. If true then we return 0 or if within the limit we return the reversed number.
