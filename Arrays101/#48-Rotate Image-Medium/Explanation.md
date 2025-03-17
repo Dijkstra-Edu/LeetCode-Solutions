@@ -1,0 +1,3 @@
+Rotate Image : Explanation
+
+So in this problem we can see that we are given with an array 1 2 3   4 5 6   7 8 9. We are required to rotate it in the right(as a square) direction once (result: 7 4 1   6 5 2   9 8 3). If we carefully observe the original matrix and the rotated matrix we are provided with, we can see that the first row becomes the last column, second row becomes the second last column and so on till the last row becomes the first column. So this gives us a clue that we need to transpose this matrix. After transposing 1 2 3   4 5 6   7 8 9 we get 1 4 7   2 5 6   3 6 9. Now if you look closely once again, this is the mirror of our solution. So to get the solution we reverse each of the rows thus reaching our desired solution.

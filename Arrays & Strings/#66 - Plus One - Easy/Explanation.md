@@ -1,0 +1,5 @@
+Explanation:
+
+The array/list 'digits' given to us is the digits of a number. Our objective is to be able to return the array with the value of the next highest integer i.e number+1. Now there are many methods which we can use here eg: We can convert the array to an integer and converting back it back to an array after incementing by 1. But that would require going through the array/list multiple times, once for conversion and again for incrementation. So let us try to perform operations on the list/array itself.
+
+Now we have to be careful when we are operating on lists since it is easy to commit IndexErrors. So first let us start with a loop accessing the last element of the list. Now if this integer is less than 9 we can just simply increment it and return it. But if it is 9 we can simply change it to zero and continue the loop. Now it will check for the second last character and so on until it finds a digit less than 9 and return it. Now if all the integers are 9, the whole list will become 0 and loop will end. If that happens, we just insert a 1 at the beginning of the list and return the list. 
