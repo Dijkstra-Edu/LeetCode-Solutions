@@ -30,6 +30,9 @@ Thank you for considering contributing to **LeetCode-Solutions**! This repositor
      ├── 2 Sum - Solution.py
      ├── 2 Sum - Explanation.md
      ```
+
+> Note: Make sure to use this [Explanation Template](https://github.com/Dijkstra-Edu/LeetCode-Solutions/blob/master/Explanation-Template.md) as reference while writing down your explanations!
+     
 5. **Commit your changes**: Use the following format for commit messages:
    ```sh
    git commit -m "Solution #num - Creator/Edited - Date - commit #num"
@@ -51,6 +54,8 @@ Thank you for considering contributing to **LeetCode-Solutions**! This repositor
 - **Pull Requests**: Keep PRs focused and limited to a single problem solution or explanation.
 - **Discussions**: Use GitHub Issues for bug reports, feature requests, or discussions before implementing major changes.
 - **Documentation**: Ensure that the `Explanation.md` file is well-written and clearly explains the approach used in the solutions.
+
+> Note: Make sure to use this [Explanation Template](https://github.com/Dijkstra-Edu/LeetCode-Solutions/blob/master/Explanation-Template.md) as reference while writing down your explanations!
 
 ## 🚀 Issue Tracking
 
