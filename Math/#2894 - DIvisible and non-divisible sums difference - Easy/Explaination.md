@@ -1,8 +1,8 @@
 # Problem Title
 
-**Difficulty:** *(Easy / Medium / Hard)*  
-**Category:** *(Arrays, Strings, Dynamic Programming, Graphs, etc.)*  
-**Leetcode Link:** [Problem Link](#)
+**Difficulty:** Easy   
+**Category:** Math  
+**Leetcode Link:** [Problem Link](https://leetcode.com/problems/divisible-and-non-divisible-sums-difference/)
 
 ---
 
