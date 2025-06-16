@@ -1,4 +1,4 @@
-# Problem Title
+# 496. Next Greater Element
 
 **Difficulty:** *Easy*  
 **Category:** *Arrays, Stack, Monotonic Stack*  
