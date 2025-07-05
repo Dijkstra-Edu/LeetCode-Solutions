@@ -1,9 +1,33 @@
 # Problem 50 : Power(x,n)
-## Difficulty : Medium
+### Difficulty : Medium
+### Category : Math
 ### Explanation (C implementation)
 
+Leetcode Link : https://leetcode.com/problems/powx-n/
+
+### Introduction
 The goal is to implement pow(x, n), which calculates x raised to the power n (i.e., x^n), without using in-built functions
 
+### Brute Force or Naive Approach
+
+This is simple logic, we can just multiply x by itself n times, can't we?
+
+double myPow(double x, int n) {
+
+    double result = 1;
+    for (int i = 0; i < n; i++)
+    {
+        result = result * x;
+    }
+    return result;
+}
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+The logic is sound but it is inefficient for larger values of n and will lead to a Time Limit Exceeded Error in LeetCode
+
+### Optimized Approach
 1. Taking care of the base cases:
 x^0 == 1 : any number raised to 0 is 1
 1^n == 1 : 1 raised to any number is 0
@@ -33,3 +57,12 @@ x^2=(x^1)^2
 #### Result:
 Time Complexity : O(log n)
 Space Complexity : O(1)
+
+### Example:
+x = 2 and n = 8
+
+2^8 = (2^4)^2
+2^4 = (2^2)^2
+2^2 = (2^1)^2
+
+Result = 256
