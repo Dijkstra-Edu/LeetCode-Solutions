@@ -1,68 +1,177 @@
-# Problem 50 : Power(x,n)
-### Difficulty : Medium
-### Category : Math
-### Explanation (C implementation)
+# 🚀 Problem 50: Power (x, n)
 
-Leetcode Link : https://leetcode.com/problems/powx-n/
+**Difficulty:** Medium  
+**Category:** Math  
+**Leetcode Link:** [https://leetcode.com/problems/powx-n/](https://leetcode.com/problems/powx-n/)
 
-### Introduction
-The goal is to implement pow(x, n), which calculates x raised to the power n (i.e., x^n), without using in-built functions
+---
 
-### Brute Force or Naive Approach
+### 📝 Introduction
 
-This is simple logic, we can just multiply x by itself n times, can't we?
+Implement the function `pow(x, n)`, which computes `x` raised to the power `n` (i.e., `xⁿ`) without using built-in functions like `pow()`.  
+Constraints include:
+- The exponent `n` can be negative.
+- You must handle large powers efficiently.
+- Result should be a double.
 
+---
+
+### 💡 Approach & Key Insights
+
+At first, this seems straightforward — just multiply `x` by itself `n` times. However, such a naive approach fails on large values of `n` due to time constraints.  
+
+The optimized solution uses **Binary Exponentiation**, which brings the time complexity down to **O(log n)** by reducing the number of multiplications required.
+
+We also need to handle edge cases like:
+- Any number to the power of 0 is 1.
+- 1 raised to any power is 1.
+- Negative exponents require us to take the reciprocal (`x^-n = 1 / x^n`).
+
+---
+
+### 🛠️ Breakdown of Approaches
+
+---
+
+#### 1️⃣ Brute Force / Naive Approach
+
+**Explanation:**  
+Multiply `x` by itself `n` times using a loop.
+
+```c
 double myPow(double x, int n) {
-
     double result = 1;
-    for (int i = 0; i < n; i++)
-    {
-        result = result * x;
+    for (int i = 0; i < n; i++) {
+        result *= x;
     }
     return result;
 }
+```
 
-Time Complexity: O(n)
-Space Complexity: O(1)
+**Time Complexity:** O(n) — Each multiplication is done one by one.  
+**Space Complexity:** O(1) — No extra space except result variable.
 
-The logic is sound but it is inefficient for larger values of n and will lead to a Time Limit Exceeded Error in LeetCode
+**Example / Dry Run:**
 
-### Optimized Approach
-1. Taking care of the base cases:
-x^0 == 1 : any number raised to 0 is 1
-1^n == 1 : 1 raised to any number is 0
+Input: `x = 2`, `n = 4`  
+Steps:  
+2 × 2 = 4 → 4 × 2 = 8 → 8 × 2 = 16  
+**Output:** `16`
 
-2. Negative numbers
-Convert them to a positive number by multiplying with -1
-Take the reciprocal because x^-1 == 1/x^n
+*⚠️ This approach fails for large `n` due to TLE on LeetCode.*
 
-3. Binary Exponentiation
-Multiplying x by itself (i.e x.x.x) n number of times would take O(n) time yielding nothing but a TimeLimitExceeded Error
-Instead, we take a mathematical route.
+---
 
-If n is even: x^n=(x^n/2)^2 (in the code : z = z/2)
+#### 2️⃣ Optimized Approach — Binary Exponentiation
 
-If n is odd: x^n= x.x^n−1 (in the code : z = z-1)
+**Explanation:**  
+We use the property of powers:
 
-Example 1 : x^8. Instead of multiplying x by itself 8 times. We can do:
-x^8=(x^4)^2
-x^4=(x^2)^2
-x^2=(x^1)^2
+- If `n` is even:  
+  `xⁿ = (x^(n/2))²`
+- If `n` is odd:  
+  `xⁿ = x × xⁿ⁻¹`
 
-Example 2 : x^5.
-x^5=x.(x^4) (notice the n-1)
-x^4=(x^2)^2
-x^2=(x^1)^2
+We convert `n` to a **positive long long** if it's negative and take the **reciprocal** at the end for negative exponents.
 
-#### Result:
-Time Complexity : O(log n)
-Space Complexity : O(1)
+**Edge Cases to Handle:**
+- `x^0 = 1`
+- `1^n = 1`
+- `x^-n = 1 / x^n`
 
-### Example:
-x = 2 and n = 8
+**C Code Snippet:**
 
-2^8 = (2^4)^2
-2^4 = (2^2)^2
-2^2 = (2^1)^2
+```c
+double myPow(double x, int n) {
+    long long z = n;
+    double result = 1.0;
 
-Result = 256
+    if (z < 0) {
+        x = 1 / x;
+        z = -z;
+    }
+
+    while (z > 0) {
+        if (z % 2 == 1) {
+            result *= x;
+            z--;
+        } else {
+            x *= x;
+            z /= 2;
+        }
+    }
+
+    return result;
+}
+```
+
+**Time Complexity:** O(log n) — At each step, we reduce the exponent by half.  
+**Space Complexity:** O(1) — Just a few variables.
+
+**Example / Dry Run:**
+
+Input: `x = 2`, `n = 8`  
+Steps:
+- 2^8 = (2^4)^2  
+- 2^4 = (2^2)^2  
+- 2^2 = (2^1)^2  
+- 2^1 = 2  
+
+So:  
+2 → 4 → 16 → 256  
+**Output:** `256`
+
+---
+
+### 📊 Complexity Analysis
+
+| Approach         | Time Complexity | Space Complexity |
+|------------------|------------------|-------------------|
+| Brute Force      | O(n)             | O(1)              |
+| Optimized        | O(log n)         | O(1)              |
+
+---
+
+### 📉 Optimization Ideas
+
+- Ensure you're casting `n` to `long long` when handling `INT_MIN`, since `-INT_MIN` would overflow in 32-bit int.
+- Use **bit manipulation** if desired (e.g., `z >> 1` instead of `z / 2`) for micro-optimizations.
+
+---
+
+### 📌 Example Walkthroughs & Dry Runs
+
+**Example 1:**
+```
+Input: x = 2, n = 5
+
+Step 1: 2^5 = 2 * 2^4
+Step 2: 2^4 = (2^2)^2 = (4)^2 = 16
+Step 3: Result = 2 * 16 = 32
+Output: 32
+```
+
+**Example 2:**
+```
+Input: x = 2.0, n = -3
+
+Step 1: Invert x → x = 1 / 2.0 = 0.5, n = 3
+Step 2: 0.5^3 = 0.5 * 0.5^2
+Step 3: 0.5^2 = (0.5)^2 = 0.25
+Step 4: 0.5 * 0.25 = 0.125
+Output: 0.125
+```
+
+---
+
+### 🔗 Additional Resources
+
+- [Power(x, n) - NeetCode Video](https://www.youtube.com/watch?v=l0YC3876qxg)
+- [Binary Exponentiation - CP Algorithms](https://cp-algorithms.com/algebra/binary-exp.html)
+- [Understanding Power Function - GeeksForGeeks](https://www.geeksforgeeks.org/write-a-c-program-to-calculate-powxn/)
+
+---
+
+**Author:** hanzel-sc
+
+**Date:** 07/07/2025
