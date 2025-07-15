@@ -1,0 +1,3 @@
+The approach we have used is as follows:
+
+a recursive “pick or not pick” approach is ideal. At each step, you either pick the current element — adding it to your combination, reducing the target by its value, and staying at the same index if repetitions are allowed — or skip it and move to the next index while keeping the target unchanged. This process continues recursively until the end of the array is reached, and if the target becomes zero, the current combination is added to the results. After each pick, backtrack by removing the last added element to explore other possible combinations.
