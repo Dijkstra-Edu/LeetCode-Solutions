@@ -6,7 +6,7 @@ double myPow(double x, int n) {
     if (x == 1 || n == 0) //x^0 == 1 and 1^n == 1
     return 1;
     
-    else if (z<0) //for negative numbers
+    else if (z < 0) //for negative numbers
     {
         z = z * -1;
         x = 1/x; //x^-1 == 1/x^n :)
