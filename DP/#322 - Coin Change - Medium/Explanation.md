@@ -2,18 +2,18 @@
 
 **Difficulty:** Medium  
 **Category:** Arrays, Dynamic Programming, Recursion  
-**Leetcode Link:** [Problem Link](https://leetcode.com/problems/target-sum)
+**Leetcode Link:** [Problem Link](https://leetcode.com/problems/coin-change)
 
 ---
 
 ## 📝 Introduction
 
-Given an integer array `nums` and an integer `target`.
-You want to build an expression out of nums by adding one of the symbols `'+'` and `'-'` before each integer in nums and then concatenate all the integers.
+You are given an integer array coins representing `coins` of different denominations and an integer `amount` representing a total amount of money.
 
-- For example, if `nums = [2, 1]`, you can add a `'+'` before `2` and a `'-'` before `1` and concatenate them to build the expression `"+2-1"`.
+Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return `-1.`
 
-Return the number of different expressions that you can build, which evaluates to `target`.
+You may assume that you have an infinite number of each kind of coin.
+
 ---
 
 ## 💡 Approach & Key Insights
@@ -50,7 +50,7 @@ This problem can be solved by generating all possible combinations using recursi
 - **Time Complexity:** O(N * T)  
   For iterating for every row and column of the table.
 
-- **Space Complexity:** O(M + N)  
+- **Space Complexity:** O(N * T)  
   For storing the table.
 
 ---
@@ -107,18 +107,18 @@ plaintext
 Example:
 Input: coins = [1,2,5], amount = 11
 Iterating for all elements of the dp array where dp[i] repressents minimum number of coins to attain i amount
-dp = [0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
-dp = [0,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
-dp = [0,1,2,-1,-1,-1,-1,-1,-1,-1,-1,-1]
-dp = [0,1,2,2,-1,-1,-1,-1,-1,-1,-1,-1]
-dp = [0,1,1,2,2,-1,-1,-1,-1,-1,-1,-1]
-dp = [0,1,1,2,2,1,-1,-1,-1,-1,-1,-1]
-dp = [0,1,1,2,2,1,2,-1,-1,-1,-1,-1]
-dp = [0,1,1,2,2,1,2,2,-1,-1,-1,-1]
-dp = [0,1,1,2,2,1,2,2,3,-1,-1,-1]
-dp = [0,1,1,2,2,1,2,2,3,3,-1,-1]
-dp = [0,1,1,2,2,1,2,2,3,3,2,-1]
-dp = [0,1,1,2,2,1,2,2,3,3,2,3]
+- dp = [0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+- dp = [0,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+- dp = [0,1,2,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+- dp = [0,1,2,2,-1,-1,-1,-1,-1,-1,-1,-1]
+- dp = [0,1,1,2,2,-1,-1,-1,-1,-1,-1,-1]
+- dp = [0,1,1,2,2,1,-1,-1,-1,-1,-1,-1]
+- dp = [0,1,1,2,2,1,2,-1,-1,-1,-1,-1]
+- dp = [0,1,1,2,2,1,2,2,-1,-1,-1,-1]
+- dp = [0,1,1,2,2,1,2,2,3,-1,-1,-1]
+- dp = [0,1,1,2,2,1,2,2,3,3,-1,-1]
+- dp = [0,1,1,2,2,1,2,2,3,3,2,-1]
+- dp = [0,1,1,2,2,1,2,2,3,3,2,3]
 
 
 Output: 3
