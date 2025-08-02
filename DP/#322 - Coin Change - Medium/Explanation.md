@@ -109,7 +109,7 @@ This problem can instead be solved by generating all possible combinations using
 
 | Approach                | Time Complexity           | Space Complexity       |
 | ----------------------- | ------------------------- | ---------------------- |
-| Plain Recursion         | O(2^N + T)                | O(N)                   |
+| Plain Recursion         | O(2<sup>N</sup> + T)       | O(N)                   |
 | Memoization             | O(N * T)                  | O(N * T) + O(N)        |
 | Tabulation              | O(N * T)                  | O(N * T)               |
 | Optimized Tabulation    | O(N * T)                  | O(T)                   |
