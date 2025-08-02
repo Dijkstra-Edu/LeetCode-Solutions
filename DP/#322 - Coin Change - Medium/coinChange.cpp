@@ -1,3 +1,28 @@
+//Plain Recursion
+class Solution {
+public:
+    int recur(int ind, int amount, vector<int>& coins){
+        if (ind == 0) {
+            if (amount % coins[0] == 0) return amount / coins[0];
+            else return 1e9;
+        }
+        int take = 1e9;
+        if(amount>=coins[ind]){
+            take = recur(ind,amount-coins[ind],coins)+1;
+        }
+        int notTake = recur(ind-1,amount,coins);
+        return min(take,notTake);
+    }
+
+    int coinChange(vector<int>& coins, int amount) {
+        int n=coins.size();
+        int minCoins = recur(n-1,amount,coins);
+        return minCoins==1e9 ? -1 : minCoins;
+    }
+};
+//Time Limit Exceeded (TLE) for large inputs
+
+
 //Memoziation
 class Solution {
 public:
