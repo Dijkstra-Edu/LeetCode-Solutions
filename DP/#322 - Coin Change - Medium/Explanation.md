@@ -20,8 +20,8 @@ You may assume that you have an infinite number of each kind of coin.
 
 The first approach that may come to mind is the greedy approach where the largest coin less than the amount is picked and it is then subtracted from the amount and repeated until it reaches zero. This approach assujes that the local optimal choices lead to a global optimal, however this is not always the case. Sometimes, a set of smaller coins may require fewer number of coins as compared to picking coins of higher denomination. This is better explained by the below example:
 
-Coin denominations: [1,6,9]
-Target amount = 12
+`Coin denominations: [1,6,9]`
+`Target amount = 12`
 - Greedy : 9 + 1 + 1 + 1 = 4 coins
 - Optimal : 6 + 6 : 2 coins
 
@@ -155,4 +155,4 @@ Output: 3
 ---
 
 Author: Vatsal Ojha 
-Date: 27/07/2025
+Date: 3/08/2025
