@@ -1,0 +1,17 @@
+class Solution:
+    def missingNumber(self, nums):
+        n = len(nums)
+
+        # Initialize xor to 0. This will hold the result of XOR operations.
+        xor = 0
+
+        # Iterate through the array
+        for i in range(n):
+            # XOR current index and the current number
+            xor = xor ^ i ^ nums[i]
+
+        # XOR with the last number n (because indices go from 0 to n-1, but range is 0 to n)
+        xor = xor ^ n
+
+        # The result is the missing number
+        return xor

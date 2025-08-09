@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int n = nums.size();
+
+        // Initialize xor to 0. This will hold the result of XOR operations.
+        int xorResult = 0;
+
+        // Iterate through the array
+        for (int i = 0; i < n; i++) {
+            // XOR current index and the current number
+            xorResult = xorResult ^ i ^ nums[i];
+        }
+
+        // XOR with the last number n (because indices go from 0 to n-1, but range is 0 to n)
+        xorResult = xorResult ^ n;
+
+        // The result is the missing number
+        return xorResult;
+    }
+};
