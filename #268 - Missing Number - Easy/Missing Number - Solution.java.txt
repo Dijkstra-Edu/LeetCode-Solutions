@@ -1,0 +1,20 @@
+class Solution {
+    public int missingNumber(int[] nums) {
+        int n = nums.length;
+        
+        // Initialize xor to 0. This will hold the result of XOR operations.
+        int xor = 0;
+
+        // Iterate through the array
+        for (int i = 0; i < n; i++) {
+            // XOR current index and the current number
+            xor = xor ^ i ^ nums[i];
+        }
+
+        // XOR with the last number n (because indices go from 0 to n-1, but range is 0 to n)
+        xor = xor ^ n;
+
+        // The result is the missing number
+        return xor;
+    }
+}
