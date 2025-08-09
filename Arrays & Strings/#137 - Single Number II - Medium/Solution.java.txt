@@ -1,0 +1,17 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+        int ones = 0;
+        int twos = 0;
+        for(int num:nums){
+             // This updates 'ones' with bits appearing first time or third time
+            ones = (ones^num) & ~twos;
+            // This updates 'twos' with bits appearing second time
+            twos =(twos^num) & ~ones;
+
+
+
+        }
+        // The 'ones' variable will contain the number that has appeared only once.
+        return ones;
+    }
+}

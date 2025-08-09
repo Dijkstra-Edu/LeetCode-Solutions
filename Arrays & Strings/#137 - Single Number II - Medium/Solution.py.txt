@@ -1,0 +1,10 @@
+class Solution:
+    def singleNumber(self, nums):
+        ones, twos = 0, 0
+        for num in nums:
+            # Update 'ones' with bits appearing first time or third time
+            ones = (ones ^ num) & ~twos
+            # Update 'twos' with bits appearing second time
+            twos = (twos ^ num) & ~ones
+        # 'ones' will contain the number that appears only once
+        return ones
