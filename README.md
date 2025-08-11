@@ -1,73 +1,337 @@
-# Contributing to LeetCode-Solutions
+<p align="center">
+  <a href="https://dijkstra-edu.github.io/Dijkstra-Web/">
+    <img src="https://github.com/Dijkstra-Edu/.github/assets/70965472/bee010e1-3ea1-45a1-abc8-f73b0dd9fcac" alt="For Students, By Students" width="500" />
+  </a>
+</p>
 
-Thank you for considering contributing to **LeetCode-Solutions**! This repository is a collection of solutions to LeetCode problems in multiple programming languages. Please read the following guidelines to ensure a smooth contribution process.
+<h1 align="center">Dijkstra - One Stop Solution for Every Aspiring CS Student</h1>
 
-## 🛠 How to Contribute
+<p align="center">
+  <a href="https://dijkstra-edu.github.io/Dijkstra-Web/">Dijkstra.org</a> •
+  <a href="#">Forum</a> •
+  <a href="#">Docs</a> •
+  <a href="https://forms.gle/rAeb5ki3x7LSWU3FA">Contributing</a> •
+  <a href="https://www.linkedin.com/company/dijkstra-edu/">LinkedIn</a> •
+  <a href="https://discord.com/invite/Ct82yF3KAU">Discord</a>
+</p>
 
-1. **Fork the repository**: Click on the **Fork** button at the top right corner of this page.
-2. **Clone your fork**: 
-   ```sh
-   git clone https://github.com/your-username/LeetCode-Solutions.git
+<p align="center">
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Dijkstra-Edu/Dijkstra-Web?style=social" />
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/Dijkstra-Edu/Dijkstra-Web?style=social" />
+  <img alt="npm version" src="https://img.shields.io/badge/npm-≥9.0.0-CB3837?logo=npm" />
+  <img alt="node version" src="https://img.shields.io/badge/node-≥18.0.0-339933?logo=node.js" />
+  <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fdijkstra-edu.github.io%2FDijkstra-Web%2F" />
+  <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/Dijkstra-Edu/Dijkstra-Web/master" />
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Dijkstra-Edu/Dijkstra-Web" />
+  <img alt="license" src="https://img.shields.io/github/license/Dijkstra-Edu/Dijkstra-Web" />
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues/Dijkstra-Edu/Dijkstra-Web" />
+  <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Dijkstra-Edu/Dijkstra-Web" />
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Dijkstra-Edu/Dijkstra-Web" />
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Dijkstra-Edu/Dijkstra-Web" />
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Dijkstra-Edu/Dijkstra-Web" />
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Dijkstra-Edu/Dijkstra-Web" />
+</p>
+
+---
+
+## 🚀 About Dijkstra
+
+**Dijkstra** is a community-driven, open-source platform aimed at bridging the skill and opportunity gap for students from Tier-2 and Tier-3 colleges in India. We empower Computer Science enthusiasts to become industry-ready through:
+
+- 🎓 A student-led open-source community fostering mentorship, learning, and growth.
+- 📚 Curated paths for mastering CS fundamentals, development skills, and soft skills.
+- 💻 Real-world project experience via collaborative app and platform development.
+
+Whether you're interested in learning, contributing, or just exploring, **Dijkstra** is the platform for you.
+
+> _"Run by students, for students."_  
+
+---
+
+## ✨ Features
+
+- 📊 **Visibility**  
+  Track your progress across all platforms — GitHub, LinkedIn, LeetCode, Codeforces, etc. See yourself level up in terms of skills, validated by **Proof of Work**, to prepare for jobs around the world.
+
+- 🛠️ **Develop Skills**  
+  Improve your DSA, Software Engineering, and Systems Design holistically through a variety of tasks within Dijkstra. Whether it’s code contributions, writing articles, sharing new approaches, or leading projects — it’s all about developing into a **globally competitive software developer**.
+
+- ✅ **Proof of Work**  
+  Dijkstra is your platform to track overall developer growth, tied to visible outputs (GitHub commits, LeetCode stats, LinkedIn activity). The goal is to **gamify your growth** and help you plan your journey effectively.
+
+- 🎯 **Killing Two Birds with One Stone**  
+  Projects aren’t just for GitHub. A good project could become a conference paper. A solid LinkedIn post could be added to your resume. Dijkstra helps **connect the dots** to maximize your output with smarter planning.
+
+- 🌍 **Community**  
+  Give back by writing articles, contributing code, and helping others — in turn, boosting your credibility and visibility in the tech ecosystem.
+
+- 🔁 **One Thing Leads to Another**  
+  Every action you take — internships, articles, papers — creates **leverage** for future opportunities. Dijkstra helps make sure your efforts lead somewhere bigger and better.
+
+---
+
+## 🏁 Getting Started
+
+> 🚧 This section is focused on **Onboarding** and is currently a work in progress.  
+> For now, use the links below to get started:
+
+- 🔐 [Login](http://localhost:3000/login)
+- 🆕 [Onboarding (Sign Up)](http://localhost:3000/login)
+
+More detailed onboarding guides, examples, and templates will be added soon. Stay tuned!
+
+# Development Setup
+
+## Prerequisites
+
+- Node.js (v18.14.2 or higher)  
+- npm, yarn, or pnpm  
+- GitHub account (for OAuth authentication)  
+
+---
+
+## Quick Start
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Dijkstra-Edu/Dijkstra-Web.git
+cd Dijkstra-Web
+```
+
+### 2. Install Dependencies
+
+```bash
+# using npm
+npm install
+
+# or using yarn
+yarn install
+
+# or using pnpm
+pnpm install
+
+# or using bun
+bun install
+```
+
+Then run:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+---
+
+<!-- ### 3. Environment Configuration
+
+Create a `.env.local` file in the root directory:
+
+```bash
+touch .env.local
+```
+
+Add the following environment variables:
+
+```env
+# NextAuth Configuration
+NEXTAUTH_SECRET=your-super-secret-key-here
+NEXTAUTH_URL=http://localhost:3000
+
+# GitHub OAuth
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+```
+
+To generate a secure secret:
+
+```bash
+openssl rand -base64 32
+```
+
+Paste the output in `NEXTAUTH_SECRET`.
+
+--- -->
+### 3. Environment Configuration (Under Review)
+
+> ⚠️ This section is subject to changes and will be updated soon.  
+> Please refer to the upcoming issue for accurate environment variable setup and dev environment handling.
+
+➡️ **Temporary Step:** You can still create a `.env.local` file for local testing, but this might change later.
+
+We will finalize the exact `.env` structure once the configuration flow is solidified.
+
+
+<!-- ### 4. Create GitHub OAuth App
+
+If you don't have GitHub OAuth credentials, follow these steps:
+
+1. Go to [GitHub Developer Settings](https://github.com/settings/developers).
+2. Under **OAuth Apps**, click **New OAuth App**.
+3. Fill in the required fields:
+
+```
+Application Name: Dijkstra-Web Local
+Homepage URL: http://localhost:3000
+Authorization Callback URL: http://localhost:3000/api/auth/callback/github
+```
+
+4. Click **Register application**.
+5. Copy the **Client ID** and generate a **Client Secret**.
+
+Update `.env.local` with these values:
+
+```env
+GITHUB_CLIENT_ID=your_client_id_here
+GITHUB_CLIENT_SECRET=your_client_secret_here
+```
+
+--- -->
+
+### 4. GitHub OAuth Setup (On Hold)
+
+> ⚠️ GitHub OAuth environment configuration is currently under review and may change.  
+> Full setup steps will be provided once finalized.
+
+In the meantime, you may explore the project using mock data or without authentication if supported.
+
+
+### 5. Restart the Development Server
+
+Stop the server (if running):
+
+```bash
+Ctrl + C
+```
+
+Then restart:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Now open [http://localhost:3000](http://localhost:3000) in your browser to view the Dijkstra Web Client.
+
+---
+
+## 📌 TaskList (Things to do)
+
+> 🛠️ This section is still being built. For now, tasks are organized into **three fixed phases only**.
+
+There's a LOT to be done. Feel free to pick up a task from this list, or try tackling issues from the [Issues](https://github.com/Dijkstra-Edu/Dijkstra-Web/issues) section. You're welcome to suggest any features, fixes, or improvements — your ideas shape Dijkstra and its potential to impact thousands of students around the world!
+
+
+### 🚀 Phase 1: Kickoff & Core Features
+
+### 🧪 Phase 2: Open Source Launch & Admin Dashboard
+
+### 🌐 Phase 3: Advanced Features & Community
+
+
+
+## 🤝 Contributing Guidelines
+
+We welcome contributions from everyone, whether you're a first-time contributor or an experienced developer! Follow these steps to contribute effectively:
+
+### 🧠 Before You Start
+
+- Check the tasklist and [Issues](https://github.com/Dijkstra-Edu/Dijkstra-Web/issues) to pick something you'd like to work on.
+- Join our [Discord](https://discord.gg/YOUR_INVITE_LINK) to connect with the team and ask questions.
+- Read this guide carefully to ensure smooth collaboration.
+
+### 🛠️ Local Development Setup
+
+> **Refer to the Development Setup section above for detailed instructions.**
+
+Make sure you’re using:
+
+- **Node.js ≥ v18.0.0**
+- **npm ≥ v9.0.0**
+
+### 🗃️ Working on a Feature or Bug
+
+1. **Fork the repository**.
+2. **Clone your fork**:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/Dijkstra-Web.git
+   cd Dijkstra-Web
    ```
-3. **Create a new branch**: 
-   ```sh
-   git checkout -b feature/your-feature-name
+3. **Create a new branch** for your feature/fix:
+   ```bash
+   git checkout -b feat/your-feature-name
    ```
-4. **Add your solution** following the structure below:
-   - Each problem should be a separate folder named using the format:
-     ```
-     #num - Name - Difficulty
-     ```
-     Example:
-     ```
-     #1 - 2 Sum - Easy
-     ```
-   - Inside the folder, include solutions in different languages and a Markdown file explaining the solution. Example:
-     ```
-     #1 - 2 Sum - Easy
-     ├── 2 Sum - Solution.java
-     ├── 2 Sum - Solution.cpp
-     ├── 2 Sum - Solution.py
-     ├── 2 Sum - Explanation.md
-     ```
-
-> Note: Make sure to use this [Explanation Template](https://github.com/Dijkstra-Edu/LeetCode-Solutions/blob/master/Explanation-Template.md) as reference while writing down your explanations!
-     
-5. **Commit your changes**: Use the following format for commit messages:
-   ```sh
-   git commit -m "Solution #num - Creator/Edited - Date - commit #num"
+4. **Make your changes** locally.
+5. **Test everything** before committing:
+   - Lint your code.
+   - Ensure your feature works as expected.
+6. **Commit with a meaningful message**:
+   ```bash
+   git commit -m "feat: added feature XYZ"
    ```
-   or for explanations:
-   ```sh
-   git commit -m "Explanation #num - Creator/Edited - Date - commit #num"
+7. **Push your branch** to your fork:
+   ```bash
+   git push origin feat/your-feature-name
    ```
-6. **Push your branch**:
-   ```sh
-   git push origin feature/your-feature-name
-   ```
-7. **Create a Pull Request (PR)**: Go to the repository on GitHub and click "New Pull Request".
+8. **Open a Pull Request** (PR) to the `main` branch of the upstream repo.
 
-## 📌 Contribution Guidelines
+---
 
-- **Follow the folder and file structure** as outlined above.
-- **Commit Messages**: Ensure that commit messages follow the specified format.
-- **Pull Requests**: Keep PRs focused and limited to a single problem solution or explanation.
-- **Discussions**: Use GitHub Issues for bug reports, feature requests, or discussions before implementing major changes.
-- **Documentation**: Ensure that the `Explanation.md` file is well-written and clearly explains the approach used in the solutions.
+### 💡 Tips for a Great Contribution
 
-> Note: Make sure to use this [Explanation Template](https://github.com/Dijkstra-Edu/LeetCode-Solutions/blob/master/Explanation-Template.md) as reference while writing down your explanations!
+- Keep your PRs small and focused.
+- Link the related issue in your PR description.
+- Add screenshots or demos where applicable.
+- Document new features and update relevant sections.
+- Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format for commit messages.
 
-## 🚀 Issue Tracking
+---
 
-- If you find an issue with an existing solution or have a suggestion, please [open an issue](https://github.com/Dijkstra-Edu/LeetCode-Solutions/issues).
-- When reporting issues, include relevant details such as problem number, expected vs. actual behavior, and language-specific concerns.
+## 🌐 Community
 
-## 📜 License
+We’re more than just code — we’re a learning community!
 
-By contributing, you agree that your contributions will be licensed under the repository's license.
+- 💬 **Join the conversation** on [Discord](https://discord.com/invite/Ct82yF3KAU). Ask questions, get help, or just say hi!
+- 🧑‍💻 **Pair program** with others to learn and grow together.
+- 🪄 **Contribute to discussions** on issues, feature requests, and roadmaps.
+- 📣 **Share your work** — show off what you’ve built with Dijkstra-Web!
 
-## 💬 Need Help?
+> Whether you're a beginner or a pro, there's a place for you here 💙
 
-If you have any questions, feel free to open an issue or start a discussion in the repository.
+---
 
-Happy coding! 🎉
+## 👥 Contributors
+
+This project exists thanks to all the people who contribute.
+
+<a href="https://github.com/Dijkstra-Edu/Dijkstra-Web/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Dijkstra-Edu/Dijkstra-Web" />
+</a>
+
+---
+
+## 🙏 Acknowledgements
+
+We would like to thank all contributors and community members who helped make this project possible.
+
+---
+
+## ©️ Copyright and License
+
+© 2025 Dijkstra-Edu. All rights reserved.
+
+This project is licensed under the [MIT License](https://github.com/Dijkstra-Edu/Dijkstra-Web/blob/main/LICENSE).  
+You are free to use, modify, and distribute this software under the conditions of the license.
