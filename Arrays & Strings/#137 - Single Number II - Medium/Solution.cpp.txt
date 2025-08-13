@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int ones = 0, twos = 0;
+        for (int num : nums) {
+            // Update 'ones' with bits appearing first time or third time
+            ones = (ones ^ num) & ~twos;
+            // Update 'twos' with bits appearing second time
+            twos = (twos ^ num) & ~ones;
+        }
+        // 'ones' will contain the number that appears only once
+        return ones;
+    }
+};
