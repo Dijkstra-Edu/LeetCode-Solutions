@@ -38,8 +38,7 @@ Insights:
 - **Explanation:**  
   - For each element `arr[i]`, iterate over the entire array and count how many times this value appears.  
   - After counting, if `count == arr[i]`, then `arr[i]` is a lucky integer candidate.  
-  - Track the **maximum** such candidate across all elements.  
-  - This is exactly the logic you wrote in Java/Python/C++ with nested loops (just fix the condition to `count == temp` and keep max). 
+  - Track the **maximum** such candidate across all elements. 
 - **Time Complexity:**  
   - Outer loop runs `n` times, inner loop runs `n` times for each outer iteration.  
   - Overall \(O(n^2)\) time. 
@@ -195,8 +194,7 @@ Output: 3
 
 - [LeetCode Problem 1394 – Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array/)  
 - [In-depth explanation with frequency map and code examples](https://algo.monster/liteproblems/1394)  
-- [Alternative editorial and multi-language solutions](https://progiez.com/1394-find-lucky-integer-in-an-array-leetcode-solution)  
-- [Another clean solution write-up](https://walkccc.me/LeetCode/problems/1394/)
+- [Alternative editorial and multi-language solutions](https://progiez.com/1394-find-lucky-integer-in-an-array-leetcode-solution)
 
 ---
 
