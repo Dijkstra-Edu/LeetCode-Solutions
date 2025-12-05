@@ -74,7 +74,7 @@ Output: `2`.
   - Instead of recounting each value with nested loops, use a **frequency map/array**.  
   - First pass: build `freq[x] = frequency of x` for all elements in `arr`.  
   - Second pass: iterate over possible values and check where `value == freq[value]`.  
-  - Track the **maximum** value that satisfies this condition. [web:16][web:4][web:40]
+  - Track the **maximum** value that satisfies this condition. 
 
   Because constraints are small (`arr[i] <= 500`), a simple integer array of size `501` is enough for frequencies. 
 
